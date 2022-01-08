@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SpaceRaiders/Scenes/MainScene.unity
+    guid: ae366676110ba7a46bd86e5044187dc3
+  - enabled: 1
+    path: Assets/SpaceRaiders/Scenes/MainScene2.unity
+    guid: 18273200d05b95648a1a7a76aa36735f
+  - enabled: 1
+    path: Assets/SpaceRaiders/Scenes/MainScene3.unity
+    guid: d091922eda1505d4e8b6cd51a6522129
+  - enabled: 1
+    path: Assets/SpaceRaiders/Scenes/Menu.unity
+    guid: 18ef509903606b14fa8698ebd910aa35
+  m_configObjects: {}
