@@ -3,6 +3,7 @@
 /// </summary>
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(FlightSystem))]
 
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
 		fireTouch = new TouchScreenVal (new Rect (Screen.width / 2, 0, Screen.width / 2, Screen.height));
 		switchTouch = new TouchScreenVal (new Rect (0, Screen.height - 100, Screen.width / 2, 100));
 		sliceTouch = new TouchScreenVal (new Rect (0, 0, Screen.width / 2, 50));
-		
+		btSwitchWeapon.onClick.AddListener(flight.WeaponControl.SwitchWeapon);
 		if (flight)
 			directVelBack = flight.DirectVelocity;
 	}
@@ -43,14 +44,15 @@ public class PlayerController : MonoBehaviour
 	{
 		if (!flight || !Active)
 			return;
-		#if UNITY_EDITOR || UNITY_WEBPLAYER || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX
+#if UNITY_EDITOR || UNITY_WEBPLAYER || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX
 		// On Desktop
-		DesktopController();
-		#else
+		//DesktopController();
+		MobileController();
+#else
 		// On Mobile device
 		MobileController ();
-		#endif
-		
+#endif
+
 	}
 	
 	void DesktopController ()
@@ -124,6 +126,7 @@ public class PlayerController : MonoBehaviour
 		
 		}	
 	}
+	public Button btSwitchWeapon;
 	
 	
 

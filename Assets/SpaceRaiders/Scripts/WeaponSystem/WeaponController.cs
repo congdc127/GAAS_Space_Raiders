@@ -61,6 +61,7 @@ public class WeaponController : MonoBehaviour
 	
 	public void SwitchWeapon ()
 	{
+		Debug.LogError("Switch Weapon");
 		CurrentWeapon += 1;
 		if (CurrentWeapon >= WeaponLists.Length) {
 			CurrentWeapon = 0;	
