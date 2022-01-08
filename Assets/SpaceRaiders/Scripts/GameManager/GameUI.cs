@@ -19,6 +19,15 @@ public class GameUI : MonoBehaviour
 		// define player
 		
 	}
+	public void OnclickButtonRestart()
+    {
+		Application.LoadLevel(Application.loadedLevelName);
+	}
+	public void OnclickButtonMenu()
+	{
+		Application.LoadLevel("Menu");
+	}
+
 
 	public void OnGUI ()
 	{
@@ -82,11 +91,11 @@ public class GameUI : MonoBehaviour
 		
 			GUI.DrawTexture (new Rect (Screen.width / 2 - Logo.width / 2, Screen.height / 2 - 150, Logo.width, Logo.height), Logo);
 		
-			if (GUI.Button (new Rect (Screen.width / 2 - 150, Screen.height / 2 + 50, 300, 40), "Restart")) {
+			if (GUI.Button (new Rect (Screen.width / 2 - 150, Screen.height / 2 + 50, 300, 100), "Restart")) {
 				Application.LoadLevel (Application.loadedLevelName);
 			
 			}
-			if (GUI.Button (new Rect (Screen.width / 2 - 150, Screen.height / 2 + 100, 300, 40), "Main menu")) {
+			if (GUI.Button (new Rect (Screen.width / 2 - 150, Screen.height / 2 + 160, 300, 100), "Main menu")) {
 				Application.LoadLevel ("Mainmenu");
 			}
 			break;
@@ -98,18 +107,18 @@ public class GameUI : MonoBehaviour
 			MouseLock.MouseLocked = false;
 			Time.timeScale = 0;
 			GUI.skin.label.alignment = TextAnchor.MiddleCenter;
-			GUI.Label (new Rect (0, Screen.height / 2 + 10, Screen.width, 30), "Pause");
+			GUI.Label (new Rect (0, Screen.height / 2 + 10, Screen.width, 60), "Pause");
 		
 			GUI.DrawTexture (new Rect (Screen.width / 2 - Logo.width / 2, Screen.height / 2 - 150, Logo.width, Logo.height), Logo);
 		
-			if (GUI.Button (new Rect (Screen.width / 2 - 150, Screen.height / 2 + 50, 300, 40), "Resume")) {
+			if (GUI.Button (new Rect (Screen.width / 2 - 150, Screen.height / 2 + 50, 300, 100), "Resume")) {
 				Mode = 0;
 				Time.timeScale = 1;
 			}
-			if (GUI.Button (new Rect (Screen.width / 2 - 150, Screen.height / 2 + 100, 300, 40), "Main menu")) {
+			if (GUI.Button (new Rect (Screen.width / 2 - 150, Screen.height / 2 + 160, 300, 100), "Main menu")) {
 				Time.timeScale = 1;
 				Mode = 0;
-				Application.LoadLevel ("Mainmenu");
+				Application.LoadLevel ("Menu");
 			}
 			break;
 			

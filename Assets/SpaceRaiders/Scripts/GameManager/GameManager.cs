@@ -26,9 +26,14 @@ public class GameManager : MonoBehaviour {
 	}
 	// game over fimction
 	public void GameOver(){
-		GameUI menu = (GameUI)GameObject.FindObjectOfType(typeof(GameUI));
+		/*GameUI menu = (GameUI)GameObject.FindObjectOfType(typeof(GameUI));
 		if(menu){
 			menu.Mode = 1;	
-		}
+		}*/
+		panelGameOver.SetActive(true);
+
+
 	}
+	public GameObject panelGameOver;
+
 }

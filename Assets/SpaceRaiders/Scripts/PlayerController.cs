@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour
 			return;
 #if UNITY_EDITOR || UNITY_WEBPLAYER || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX
 		// On Desktop
-		//DesktopController();
-		MobileController();
+		DesktopController();
+		//MobileController();
 #else
 		// On Mobile device
 		MobileController ();
