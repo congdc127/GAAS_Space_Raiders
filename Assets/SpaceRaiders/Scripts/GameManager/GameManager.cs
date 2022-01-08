@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	void OnGUI(){
-		//GUI.Label(new Rect(20,20,300,30),"Kills "+Score);
+		GUI.Label(new Rect(20,20,300,30),"Kills "+Score);
 	}
 	// game over fimction
 	public void GameOver(){
